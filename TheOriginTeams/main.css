@@ -1,0 +1,837 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Smooth Scrolling in page*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* blackground color chosen as black as temporary */
+body {
+    background-color: #ededed;
+    z-index: 2;
+    /* height: 200rem; */
+    
+}
+
+/* nevigation bar are displayed as flex */
+nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    height: 60px;
+    background-color: #252935;
+    z-index: 6;
+}
+
+/* logo size are defined */
+.logo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    right: 180px;
+    bottom: 4px;
+}
+
+/* modifyling unordered list*/
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 40px 40px;
+    position: relative;
+    bottom: 5px;
+    right: 250px;
+    z-index: 3;
+
+}
+
+/* changing the color ,font ,text decolartionn of home , services, contact us and about  */
+nav ul li a {
+    color: #ededed;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .1s;
+    font-family: 'Nunito', sans-serif;
+}
+
+.options {
+    height: 100px;
+    position: relative;
+    left: 150px;
+}
+
+/* making purple color when we hover */
+nav ul li a:hover {
+    color: #8d38ed;
+}
+
+/* maing purple color trasition when we cover */
+.hover-line::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #8d38ed;
+    transition: width .3s;
+}
+
+.hover-line:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+/* main title of home page designing */
+.home h1 {
+    color: #33363d;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    font-size: 70px;
+}
+
+.home {
+    position: relative;
+    top: 180px;
+}
+
+/* business and creting part of title color change */
+.home span {
+    color: #8d38ed;
+}
+
+/* after title there is image and description and we are using flex to design  */
+.bg {
+    z-index: -1;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 65rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1915' height='1076' preserveAspectRatio='none' viewBox='0 0 1915 1076'%3e%3cg mask='url(%26quot%3b%23SvgjsMask2456%26quot%3b)' fill='none'%3e%3cpath d='M398.629%2c956.739C488.069%2c952.458%2c547.004%2c876.059%2c594.15%2c799.934C645.086%2c717.69%2c700.648%2c624.076%2c658.618%2c536.944C612.61%2c441.565%2c504.202%2c386.326%2c398.629%2c394.597C303.783%2c402.027%2c246.117%2c489.181%2c200.766%2c572.813C158.237%2c651.241%2c126.887%2c741.038%2c167.758%2c820.343C211.645%2c905.5%2c302.938%2c961.319%2c398.629%2c956.739' fill='rgba(141%2c 56%2c 237%2c 0.28)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M517.066%2c386.667C553.585%2c387.862%2c583.865%2c361.142%2c601.706%2c329.255C619.086%2c298.192%2c623.059%2c260.292%2c604.906%2c229.674C587.073%2c199.594%2c552.034%2c186.184%2c517.066%2c186.491C482.689%2c186.792%2c448.41%2c201.062%2c431.855%2c231.191C415.799%2c260.412%2c425.479%2c294.777%2c441.503%2c324.015C458.358%2c354.768%2c482.016%2c385.521%2c517.066%2c386.667' fill='rgba(141%2c 56%2c 237%2c 0.28)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M423.608%2c862.982C457.299%2c864.488%2c485.843%2c839.857%2c501.854%2c810.175C517.034%2c782.032%2c517.57%2c747.637%2c500.363%2c720.685C484.296%2c695.518%2c453.467%2c687.625%2c423.608%2c687.613C393.723%2c687.601%2c361.688%2c694.742%2c346.747%2c720.624C331.808%2c746.504%2c342.409%2c777.389%2c356.606%2c803.683C371.793%2c831.811%2c391.674%2c861.555%2c423.608%2c862.982' fill='rgba(141%2c 56%2c 237%2c 0.28)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1176.297%2c650.069C1269.377%2c643.45%2c1330.183%2c561.747%2c1373.969%2c479.343C1414.382%2c403.286%2c1437.116%2c314.08%2c1394.636%2c239.158C1351.677%2c163.391%2c1263.39%2c129.739%2c1176.297%2c130.71C1091.044%2c131.66%2c1013.442%2c172.943%2c966.226%2c243.933C912.622%2c324.527%2c878.625%2c425.431%2c923.094%2c511.404C970.478%2c603.013%2c1073.419%2c657.384%2c1176.297%2c650.069' fill='rgba(141%2c 56%2c 237%2c 0.28)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1559.778%2c1121.565C1633.199%2c1119.91%2c1693.498%2c1068.431%2c1728.194%2c1003.704C1760.878%2c942.73%2c1762.908%2c869.048%2c1726.75%2c810.068C1692.09%2c753.531%2c1626.044%2c731.532%2c1559.778%2c728.985C1487.548%2c726.208%2c1408.137%2c735.553%2c1368.986%2c796.315C1327.291%2c861.025%2c1338.726%2c945.209%2c1377.675%2c1011.607C1416.129%2c1077.161%2c1483.797%2c1123.278%2c1559.778%2c1121.565' fill='rgba(141%2c 56%2c 237%2c 0.28)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1553.929%2c480.007C1604.261%2c480.665%2c1651.463%2c458.628%2c1680.042%2c417.192C1713.548%2c368.612%2c1737.52%2c306.504%2c1709.373%2c254.635C1680.335%2c201.123%2c1614.809%2c185.357%2c1553.929%2c184.791C1491.798%2c184.213%2c1422.318%2c196.704%2c1393.397%2c251.697C1365.604%2c304.543%2c1399.061%2c365.121%2c1433.404%2c413.965C1461.645%2c454.13%2c1504.833%2c479.365%2c1553.929%2c480.007' fill='rgba(141%2c 56%2c 237%2c 0.28)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask2456'%3e%3crect width='1915' height='1076' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 4s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.section {
+    /* border: white 2px solid; */
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 140px;
+    width: 100%;
+    height: 400px;
+    /* left: 150px; */
+    /* color: rgb(216, 215, 215); */
+}
+
+/* 3 images and description have its own border box */
+#part1,
+#part2,
+#part3 {
+    /* background-color: red; */
+    height: 100px;
+    display: block;
+    width: 350px;
+    height: 300px;
+    transition: width .3s;
+}
+
+.title0 {
+    position: relative;
+    top: 180px;
+    height: 180px;
+}
+
+.title0 h2 {
+    color: #5a5f70;
+    font-family: 'Nunito', sans-serif;
+    ;
+    text-align: center;
+    /* top: 100px; */
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.title0 p {
+    text-align: center;
+    color: #61646d;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+
+}
+
+.team {
+    width: 100%;
+    height: 50rem;
+    position: relative;
+    top: 220px;
+}
+
+.meet {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 220px;
+    height: 300px;
+}
+
+.title1,
+.title2 {
+    background-color: white;
+    width: 30rem;
+    height: 230px;
+    border-style: solid;
+    border-color: #8d38ed;
+    border-width: 9px;
+    border-radius: 20px;
+    border-bottom-width: 0;
+    border-bottom-style: none;
+    border-right-width: 0;
+    border-right-style: none;
+    border-top-width: 0;
+    border-top-style: none;
+    position: relative;
+    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.title1 {
+    left: 100px;
+}
+
+.title2 {
+    right: 80px;
+}
+
+.meet h5 {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: #5a5f70;
+}
+
+.meet p {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #61646d;
+}
+
+.meet a {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    color: #61646d;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration-line: underline;
+    font-weight: 550;
+}
+
+.meet a:hover {
+    color: #8d38ed;
+}
+
+.company {
+    background-color: #252935;
+    top: 280px;
+    position: relative;
+    height: 65rem;
+    width: 100%;
+}
+
+.title3 {
+    height: 450px;
+}
+
+.title3 h1 {
+    text-align: center;
+    padding-top: 80px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    color: #ededed;
+}
+
+.title3 p {
+    position: relative;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    width: 840px;
+    color: #ededed;
+    margin: auto;
+    text-align: center;
+    top: 35px;
+    line-height: 40px;
+    font-size: 20px;
+    /* left: 470px; */
+}
+
+.title3 button {
+    display: block;
+    position: relative;
+    top: 80px;
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    background-color: #ededed;
+    color: #34363d;
+    border-style: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title3 button:hover {
+    background-color: #8d38ed;
+    color: #ededed;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    top: 150px;
+    justify-content: space-evenly;
+    height: 300px;
+
+}
+
+.box1 {
+    background-color: #ededed;
+    display: block;
+    position: relative;
+    bottom: 50px;
+    left: 40px;
+    width: 500px;
+    height: 250px;
+    padding-top: 40px;
+    padding-left: 40px;
+    border-radius: 8px;
+}
+
+.box1 h2 {
+    position: relative;
+    bottom: 5px;
+    left: 10px;
+    color: #5a5f70;
+    width: 500px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    line-height: 3rem;
+
+}
+
+.box2 {
+    background-color: #ededed;
+    display: block;
+    position: relative;
+    bottom: 50px;
+    right: 50px;
+    width: 460px;
+    height: 250px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 30px;
+    border-radius: 8px;
+}
+
+.box2 p {
+    position: relative;
+    color: #5a5f70;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.line {
+    position: relative;
+    left: 227px;
+    width: 160px;
+    height: 4px;
+    background-color: #8d38ed;
+
+}
+
+.photo img {
+    display: block;
+    width: 800px;
+    height: 500px;
+    position: relative;
+    top: 30px;
+    margin: auto;
+
+}
+
+.details {
+    position: relative;
+    top: 100px;
+    height: 50rem;
+    width: 100%;
+}
+
+.title4 h2 {
+    display: block;
+    width: 500px;
+    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 80px;
+    color: #5a5f70;
+}
+
+.title4 p {
+    width: 620px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    color: #5a5f70;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    top: 90px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 150px;
+    width: 100%;
+    height: 480px;
+    /* border: 2px solid purple; */
+}
+
+.box3 {
+    position: relative;
+    left: 115px;
+    border-radius: 18px;
+    width: 350px;
+    background-color: #8d38ed;
+    height: 300px;
+}
+
+.box3 p {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 24px;
+    position: relative;
+    top: 100px;
+    display: block;
+    margin: auto;
+    color: #ededed;
+}
+
+.box4 {
+
+    border-radius: 18px;
+    width: 350px;
+    background-color: #8d38ed;
+    height: 300px;
+}
+
+.box4 p {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 24px;
+    position: relative;
+    top: 100px;
+    display: block;
+    margin: auto;
+    color: #ededed;
+}
+
+.box5 {
+    position: relative;
+    right: 115px;
+    border-radius: 18px;
+    width: 350px;
+    background-color: #8d38ed;
+    height: 300px;
+}
+
+.box5 p {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 24px;
+    position: relative;
+    top: 100px;
+    display: block;
+    margin: auto;
+    color: #ededed;
+}
+
+.figure {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    /* top: 100px; */
+}
+
+.fig1 img {
+    position: relative;
+    left: 100px;
+    border: 4px solid #8d38ed;
+    border-radius: 400rem;
+    width: 70px;
+    height: 70px;
+}
+
+.fig1 h4 {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    bottom: 36px;
+    left: 12rem;
+    color: #5a5f70;
+    font-weight: bold;
+
+}
+
+.fig2 {
+    position: relative;
+    left: 160px;
+    border: 4px solid #8d38ed;
+    border-radius: 400rem;
+    width: 70px;
+    height: 70px;
+}
+
+.dilip {
+    position: relative;
+    top: 46px;
+    font-family: 'Open Sans', sans-serif;
+    right: 18px;
+    color: #5a5f70;
+    font-weight: bold;
+}
+
+.fig3 {
+    position: relative;
+    right: 20px;
+    border: 4px solid #8d38ed;
+    border-radius: 400rem;
+    width: 70px;
+    height: 70px;
+}
+
+.bidhan {
+    position: relative;
+    top: 44px;
+    font-family: 'Open Sans', sans-serif;
+    right: 195px;
+    color: #5a5f70;
+    font-weight: bold;
+
+}
+.services{
+    display: flex;
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    justify-content: space-around;
+    top: 120px;
+    background-color: #252935;
+}
+.gaurav {
+    position: relative;
+    left: 140px;
+    top: 100px;
+    width: 450px;
+    height: 700px;
+}
+.anubhav{
+    position: relative;
+    right: 100px;
+    top: 140px;
+    width: 500px;
+    height: 600px;
+}
+.service-detail {
+    position: relative;
+    background-color: white;
+    width: 25rem;
+    height: 260px;
+    border-style: solid;
+    border-color: #8d38ed;
+    border-width: 9px;
+    border-left: #8d38ed;
+    border-right: #8d38ed;
+    border-radius: 20px;
+    border-top-width: 0;
+    border-top-style: none;
+    position: relative;
+    bottom: 10px;
+    left: 35rem;
+    box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 10%);
+    
+}
+.service-detail h2 {
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    color: #5a5f70;
+    padding-top: 15px;
+
+}
+.service-detail p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #61646d;
+    padding-top: 15px;
+    padding-left: 30px;
+    text-align: center;
+    width: 330px;
+}
+.service-detail a {
+    display: block;
+    position: relative;
+    text-align: center;
+    top: 30px;
+    margin: auto;
+    width: 180px;
+    height: 50px;
+    background-color:#8d38ed;
+    color:#ededed;
+    border-style: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+.service-detail a:hover{
+    background-color: #9e50f8;
+    color: #ffffff;
+}
+.learn{
+    position: relative;
+    top: 13px;
+}
+
+
+.motivation{
+    position: relative;
+    top: 200px;
+    width: 100%;
+    height: 45rem;
+    display: flex;
+    justify-content: space-around;
+    cursor: default;
+}
+.motivation h2{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    top: 250px;
+    left: 7rem;
+    width: 700px;
+    height: 150px;
+    cursor:auto;
+    color: #8d38ed;
+}
+.motivation p{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    right: 46rem;
+    top: 26rem;
+    width: 460px;
+    height: 200px;
+    cursor: auto;
+    color: #61646d;
+
+}
+.photo1 {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    bottom: 40rem;
+    left: 37rem;
+    margin: 0px;
+    padding: 0px;
+    cursor:default;
+}
+.contact{
+    position: relative;
+    height: 4rem;
+    top: 100px;
+}
+.contact h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    color: #5a5f70;
+}
+
+
+.bottom{
+    display: flex;
+    position: relative;
+    top: 6rem;
+    justify-content: space-around;
+    font-family: 'Nunito', sans-serif;
+    line-height: normal;
+    text-align: center;
+}
+
+.bottom h2{
+    font-size: 25px;
+}
+
+.bottom i{
+    font-size: 40px;
+}
+
+form {
+    position: relative;
+    top: 25rem;
+    left: 6rem;
+    height: 400px;
+    width: 75rem;
+
+}
+.flength {
+   position: relative;
+   right: 30px;
+}
+
+form input{
+    width: 100%;
+    height: 40px;
+    padding: 1px 25px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #8d38ed;
+}
+
+.form{
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    gap: 8rem;
+}
+
+.comment {
+    margin-left: 25px;
+}
+
+
+form textarea{
+    position: relative;
+    right: 15px;
+    margin-top: 2rem;
+    width: 75rem;
+    height: 150px;
+    padding: 15px 20px;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #8d38ed;
+}
+
+form button{
+    position: relative;
+    left: 35.5rem;
+    border: 0;
+    padding: 10px 30px;
+    background: #8d38ed;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    border-radius: 3px;
+    top: 20px;
+}
+
+form button:hover{
+    background-color: rgb(119, 119, 119);
+    cursor: pointer;
+}
+
+
+.fa-user{
+    position: relative;
+    left: 19px;
+    top: 12px;
+}
+
+.env{
+    position: relative;
+    left: 134px;
+    top: 13px;
+    z-index: 2;
+} 
+
+.fa-pen-nib{
+    position: relative;
+    left: 28px;
+    top: 67px;
+}
+
+.fa-pen-to-square{
+    font-weight: 10;
+    position: relative;
+    z-index: 2;
+    top: 12px;
+    left: 228px;
+
+}
+
+/* Footer section */
+footer {
+    background-color: rgb(37, 41, 53);
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: 480px;
+}
+
+footer h4 {
+    text-align: center;
+    font-size: 1rem;
+    font-family: "0pen Sans", sans-serif;
+    color: #868c9d;
+    position: relative;
+    bottom: 6px;
+}
+
+.sociallinks {
+    position: relative;
+    bottom: 25px;
+    margin-left: 73rem;
+    
+}
+.sociallinks i {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #868c9d;
+}
+ .sociallinks i:hover {
+    color: #8d38ed;
+ }
+
+ @media screen and (max-width: 944px) {
+    
+    nav {
+        width: 100%;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: space-around;
+        height: 60px;
+    }
+ }
